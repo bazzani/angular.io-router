@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { slideInAnimation } from './animations';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {slideInAnimation} from './animations';
+
+const ANIMATION_PROPERTY = 'animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  animations: [ slideInAnimation ]
+  animations: [slideInAnimation]
 })
 export class AppComponent {
   getAnimationData(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData[ANIMATION_PROPERTY];
   }
 }

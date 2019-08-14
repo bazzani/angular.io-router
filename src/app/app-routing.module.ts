@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       {
-        enableTracing: false, // <-- debugging purposes only
+        enableTracing: true, // <-- debugging purposes only
         preloadingStrategy: SelectivePreloadingStrategyService,
       }
     )
